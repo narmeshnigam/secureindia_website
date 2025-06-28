@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livintiq - Smart Home Automation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #002a22;
+      --accent-green: #67f1b4;
+      --text-muted: #b2eedc;
+      --btn-bg: #a4f4cb;
+      --btn-text: #002a22;
+      --overlay-box: rgba(255, 255, 255, 0.04);
+      --font-family: 'Inter', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--accent-green);
+      font-family: var(--font-family);
+      line-height: 1.6;
+    }
+
+    header, footer {
+      padding: 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--bg-dark);
+    }
+
+    header img {
+      height: 48px;
+    }
+
+    nav a {
+      color: var(--accent-green);
+      margin-left: 24px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: auto;
+      padding: 48px 24px;
+    }
+
+    h1 { font-size: 56px; font-weight: 700; margin-bottom: 24px; }
+    h2 { font-size: 32px; font-weight: 600; margin: 64px 0 24px; }
+    h3 { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+    p { color: var(--text-muted); margin-bottom: 16px; }
+
+    .btn {
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-top: 8px;
+    }
+    .btn:hover {
+      filter: brightness(110%);
+      transform: scale(1.02);
+    }
+
+    .hero-slider {
+      overflow: hidden;
+      width: 100%;
+    }
+    .hero-slider img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--overlay-box);
+      border-radius: 16px;
+      padding: 24px;
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(103, 241, 180, 0.2);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+
+    .wide-slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 32px;
+      scroll-snap-type: x mandatory;
+      padding: 24px 0;
+    }
+    .wide-slider .card {
+      flex: 0 0 48%;
+      scroll-snap-align: start;
+    }
+
+    .section {
+      margin-bottom: 64px;
+    }
+
+    .highlight-card {
+      display: flex;
+      gap: 32px;
+      background: var(--overlay-box);
+      border-radius: 16px;
+      padding: 32px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .highlight-card img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+    }
+    .highlight-content {
+      flex: 1 1 300px;
+    }
+
+    .caption-image {
+      position: relative;
+      margin-top: 32px;
+    }
+    .caption-image img {
+      width: 100%;
+      border-radius: 16px;
+      transition: transform 0.3s ease;
+    }
+    .caption-image:hover img {
+      transform: scale(1.03);
+    }
+    .caption-text {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: rgba(0,0,0,0.4);
+      padding: 12px 16px;
+      border-radius: 8px;
+      color: white;
+    }
+
+    .form-box {
+      background: var(--overlay-box);
+      padding: 32px;
+      border-radius: 16px;
+      max-width: 640px;
+    }
+    .form-group { margin-bottom: 24px; }
+    label { display: block; margin-bottom: 6px; }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--accent-green);
+      background: transparent;
+      color: var(--accent-green);
+      font-family: var(--font-family);
+    }
+    select { appearance: none; }
+
+    footer p { font-size: 14px; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="example_image.jpg" alt="Livintiq Logo">
+    <nav>
+      <a href="#">Solutions</a>
+      <a href="#">Projects</a>
+      <a href="#">Learn</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero-slider">
+    <img src="example_image.jpg" alt="Hero Image">
+  </div>
+
+  <main class="container">
+    <div class="section">
+      <h2>Explore Our Smart Home Categories</h2>
+      <div class="feature-grid">
+        <div class="card">
+          <img src="example_image.jpg" alt="Lighting">
+          <h3>Smart Lighting</h3>
+          <p>Create the perfect mood with voice or app-controlled lighting scenes.</p>
+        </div>
+        <div class="card">
+          <img src="example_image.jpg" alt="Curtains">
+          <h3>Smart Curtains</h3>
+          <p>Wake up naturally with motorized curtains that move with your schedule.</p>
+        </div>
+        <div class="card">
+          <img src="example_image.jpg" alt="Door Lock">
+          <h3>Smart Locks</h3>
+          <p>Keep your home safe with fingerprint, PIN and app-based door locks.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Popular Setups Loved by Homeowners</h2>
+      <div class="wide-slider">
+        <div class="card">
+          <img src="example_image.jpg" alt="Combo 1">
+          <h3>Living Room Scene</h3>
+          <p>Integrate lighting, curtains, and entertainment for a perfect lounge experience.</p>
+        </div>
+        <div class="card">
+          <img src="example_image.jpg" alt="Combo 2">
+          <h3>Security Bundle</h3>
+          <p>Smart lock + video doorbell + Wi-Fi camera for complete entrance protection.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="highlight-card">
+        <img src="example_image.jpg" alt="Bungalow">
+        <div class="highlight-content">
+          <h3>Upgrade Your Bungalow With Premium Automation</h3>
+          <p>From energy efficiency to lifestyle comfort, Livintiq enables fully integrated smart living with retrofitting or new construction plans.</p>
+          <button class="btn">Get Quote</button>
+          <button class="btn">View Project</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Discover More</h2>
+      <div class="caption-image">
+        <a href="#"><img src="example_image.jpg" alt="Explore"></a>
+        <div class="caption-text">See Our Smart Villas</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Book a Free Consultation</h2>
+      <div class="form-box">
+        <form>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone">
+          </div>
+          <div class="form-group">
+            <label for="property">Property Type</label>
+            <select id="property">
+              <option>Apartment</option>
+              <option>Villa</option>
+              <option>Bungalow</option>
+              <option>Farmhouse</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell Us More</label>
+            <textarea id="message" rows="4" placeholder="Describe what you're looking for"></textarea>
+          </div>
+          <button class="btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Livintiq. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+  </footer>
+</body>
+</html>

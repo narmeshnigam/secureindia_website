@@ -1,0 +1,143 @@
+Livintiq Website Theme & UI Style Guide
+(Developer Reference)
+
+Last Updated: 28 June 2025
+
+Color Palette
+Purpose	HEX Code	Notes
+Primary Background	#002A22	Dominant dark theme, base canvas
+Accent Green	#67F1B4	Used for headlines, icons, links
+Subdued Text	#B2EEDC	Used for body text, muted elements
+Button Background	#A4F4CB	CTA buttons
+Button Text Color	#002A22	Inside buttons for contrast
+Overlay Box BG	rgba(255,255,255,0.04)	For cards, overlays, and info blocks
+Shadow Tint (cards)	rgba(103, 241, 180, 0.2)	Hover shadow for visual elevation
+
+Typography
+Element	Font	Weight	Size (px)	Use Case
+H1 (Hero Title)	Inter	700	64	Hero sections, page titles
+H2	Inter	600	36	Section titles
+H3 (Card Titles)	Inter	600	22	Cards, feature headlines
+Body Text	Inter	400–500	16	Paragraphs, descriptions
+Button Text	Inter	600	16–18	Calls to action
+Small Text	Inter	400	14	Footer, labels
+
+Rules:
+•	Sentence case for body content and buttons
+•	Title case for headings
+•	Line height: ~1.4 to 1.6
+•	No text shadows
+
+Buttons
+
+Primary Button
+css
+background: #A4F4CB;
+color: #002A22;
+padding: 16px 32px;
+border-radius: 12px;
+font-weight: 600;
+transition: all 0.3s ease;
+
+Hover: Slight brightness + scale up
+
+Disabled State: Greyed with cursor not-allowed
+
+Cards
+
+Style
+css
+background: rgba(255,255,255,0.04);
+padding: 24px;
+border-radius: 16px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+Hover:
+css
+transform: translateY(-5px);
+box-shadow: 0 4px 20px rgba(103, 241, 180, 0.2);
+
+Image Styling
+Guidelines
+•	Border-radius: 16px
+•	Shadow: 0 8px 24px rgba(0, 0, 0, 0.3)
+•	Max-width: 100%
+•	Margin-bottom: 32px
+•	Use dark-tone or night-lit luxury interiors
+
+Dropdown (Custom Select)
+css
+appearance: none;
+background: transparent;
+border: 1px solid #67F1B4;
+color: #67F1B4;
+padding: 12px;
+border-radius: 8px;
+Avoid default OS styling. Optionally add a caret icon using pseudo-elements or inline SVG.
+
+📋 Tables
+css
+border-collapse: collapse;
+border: 1px solid #67F1B4;
+padding: 12px;
+color: #B2EEDC;
+
+Header Row:
+css
+CopyEdit
+background: rgba(255,255,255,0.04);
+color: #67F1B4;
+font-weight: 600;
+Use spacing and grid consistency. Tables can be used for device comparison, setup matrices, etc.
+
+Loading Animation
+Circular Spinner
+css
+border: 6px solid rgba(255,255,255,0.2);
+border-top: 6px solid #67F1B4;
+border-radius: 50%;
+animation: spin 1s linear infinite;
+
+css
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+Used for form submissions, data fetches, page transitions.
+
+Navigation Bar
+•	Fixed or static
+•	Brand logo on the left, About, Contact on the right
+•	Font size: 18px
+•	Color: #67F1B4
+•	Mobile version: hamburger icon with slide-out drawer
+
+Form Inputs
+css
+padding: 12px;
+border-radius: 8px;
+border: 1px solid #67F1B4;
+background-color: transparent;
+color: #67F1B4;
+Labels use display: block and margin-bottom: 8px.
+Match all form elements (input, select, textarea) to brand colors.
+
+Transitions & Animations
+•	All buttons/cards: transition: all 0.3s ease
+•	Page loads can optionally fade in or slide sections
+•	Avoid loud effects—stick to elegant, subtle motion
+
+Containers & Spacing
+Element	Spec
+Max width	1280px centered
+Page side padding	48px desktop, 24px mobile
+Section spacing	96px between sections
+Card margin	24px below each card
+
+Don'ts
+•	No light backgrounds
+•	No default browser inputs or dropdowns
+•	No boxy or sharp corners
+•	No overuse of shadows or motion
+•	Don’t mix other fonts or styles
+

@@ -1,11 +1,23 @@
+:root {
+  --primary-color: #1A2A6C;
+  --accent-color: #00E6E6;
+  --text-primary: #222222;
+  --text-secondary: #555555;
+  --background-light: #F9F9FB;
+  --divider-border: #E0E0E0;
+  --cta-hover-bg: #162055;
+  --error-color: #FF4C4C;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
 /*******************************/
 /********* General CSS *********/
 /*******************************/
 body {
-    color: #666666;
-    background: #dddddd;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+    color: var(--text-secondary);
+    background: var(--background-light);
+    font-family: var(--font-body);
 }
 
 h1,
@@ -14,18 +26,19 @@ h3,
 h4,
 h5, 
 h6 {
-    color: #263a81;
+    font-family: var(--font-heading);
+    color: var(--primary-color);
 }
 
 a {
-    color: #666666;
+    color: var(--text-secondary);
     transition: .3s;
 }
 
 a:hover,
 a:active,
 a:focus {
-    color: #33b49e;
+    color: var(--primary-color);
     outline: none;
     text-decoration: none;
 }
@@ -45,7 +58,7 @@ a:focus {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #33b49e;
+    background: var(--primary-color);
     color: #121518;
     width: 44px;
     height: 44px;
@@ -59,8 +72,8 @@ a:focus {
 }
 
 .back-to-top:hover {
-    color: #33b49e;
-    background: #121518;
+    color: var(--accent-color);
+    background: var(--cta-hover-bg);
 }
 
 .back-to-top i {
@@ -69,6 +82,20 @@ a:focus {
 
 .btn {
     transition: .3s;
+    display: inline-block;
+    padding: 16px 32px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: #ffffff;
+    background: var(--primary-color);
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.btn:hover {
+    background: var(--cta-hover-bg);
+    color: #ffffff;
+    transform: scale(1.02);
 }
 
 
@@ -78,7 +105,7 @@ a:focus {
 .top-bar {
     position: relative;
     height: 90px;
-    background: #33b49e;
+    background: var(--primary-color);
 }
 
 .top-bar .logo {
@@ -89,7 +116,7 @@ a:focus {
 
 .top-bar .logo h1 {
     margin: 0;
-    color: #263a81;
+    color: var(--primary-color);
     font-size: 60px;
     line-height: 60px;
     font-weight: 700;
@@ -115,7 +142,7 @@ a:focus {
 
 .top-bar .top-bar-icon [class^="flaticon-"]::before {
     margin: 0;
-    color: #263a81;
+    color: var(--primary-color);
     font-size: 40px;
 }
 
@@ -125,14 +152,14 @@ a:focus {
 
 .top-bar .top-bar-text h3 {
     margin: 0 0 5px 0;
-    color: #263a81;
+    color: var(--primary-color);
     font-size: 16px;
     font-weight: 400;
 }
 
 .top-bar .top-bar-text p {
     margin: 0;
-    color: #263a81;
+    color: var(--primary-color);
     font-size: 13px;
     font-weight: 400;
 }
@@ -155,7 +182,7 @@ a:focus {
 /**********************************/
 .nav-bar {
     position: relative;
-    background: #33b49e;
+    background: var(--primary-color);
     transition: .3s;
 }
 
@@ -174,7 +201,7 @@ a:focus {
 
 .nav-bar .navbar {
     height: 100%;
-    background: #263a81 !important;
+    background: var(--primary-color) !important;
 }
 
 .navbar-dark .navbar-nav .nav-link,
@@ -187,7 +214,7 @@ a:focus {
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #33b49e;
+    color: var(--primary-color);
     transition: none;
 }
 
@@ -205,9 +232,9 @@ a:focus {
 }
 
 .nav-bar .btn:hover {
-    color: #263a81;
-    background: #33b49e;
-    border-color: #33b49e;
+    color: var(--primary-color);
+    background: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 @media (min-width: 992px) {
@@ -330,9 +357,9 @@ a:focus {
 }
 
 .carousel .carousel-caption .btn:hover {
-    color: #263a81;
-    background: #33b49e;
-    border-color: #33b49e;
+    color: var(--primary-color);
+    background: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 @media (max-width: 767.98px) {
@@ -385,12 +412,12 @@ a:focus {
     margin-bottom: 45px;
     padding: 90px 0;
     text-align: center;
-    background: #33b49e;
+    background: var(--primary-color);
 }
 
 .page-header h2 {
     position: relative;
-    color: #263a81;
+    color: var(--primary-color);
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -404,14 +431,14 @@ a:focus {
     height: 2px;
     left: calc(50% - 50px);
     bottom: 0;
-    background: #263a81;
+    background: var(--primary-color);
 }
 
 .page-header a {
     position: relative;
     padding: 0 12px;
     font-size: 22px;
-    color: #263a81;
+    color: var(--primary-color);
 }
 
 .page-header a:hover {
@@ -472,7 +499,7 @@ a:focus {
 }
 
 .section-header p {
-    color: #33b49e;
+    color: var(--primary-color);
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 5px;
@@ -501,12 +528,12 @@ a:focus {
 }
 
 .feature .col-md-12 {
-    background: #263a81;
+    background: var(--primary-color);
 }
     
 .feature .col-md-12:nth-child(2n) {
-    color: #263a81;
-    background: #33b49e;
+    color: var(--primary-color);
+    background: var(--primary-color);
 }
 
 .feature .feature-item {
@@ -544,19 +571,19 @@ a:focus {
     height: 79px;
     top: -18px;
     left: -9px;
-    background: #263a81;
+    background: var(--primary-color);
     border-radius: 60px;
     z-index: 2;
 }
 
 .feature .col-md-12:nth-child(2n) .feature-icon::after {
-    background: #33b49e;
+    background: var(--primary-color);
 }
 
 .feature .feature-icon [class^="flaticon-"]::before {
     position: relative;
     margin: 0;
-    color: #33b49e;
+    color: var(--primary-color);
     font-size: 60px;
     line-height: 60px;
     z-index: 3;
@@ -568,14 +595,14 @@ a:focus {
 
 .feature .feature-text h3 {
     margin: 0 0 10px 0;
-    color: #33b49e;
+    color: var(--primary-color);
     font-size: 25px;
     font-weight: 600;
 }
 
 .feature .feature-text p {
     margin: 0;
-    color: #33b49e;
+    color: var(--primary-color);
     font-size: 18px;
     font-weight: 400;
 }
@@ -583,7 +610,7 @@ a:focus {
 .feature .col-md-12:nth-child(2n) [class^="flaticon-"]::before,
 .feature .col-md-12:nth-child(2n) h3,
 .feature .col-md-12:nth-child(2n) p {
-    color: #263a81;
+    color: var(--primary-color);
 }
 
 
@@ -622,15 +649,15 @@ a:focus {
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 1px;
-    color: #263a81;
+    color: var(--primary-color);
     border-radius: 0;
-    background: #33b49e;
+    background: var(--primary-color);
     transition: .3s;
 }
 
 .about .about-text a.btn:hover {
-    color: #33b49e;
-    background: #263a81;
+    color: var(--primary-color);
+    background: var(--primary-color);
 }
 
 @media (max-width: 767.98px) {
@@ -668,13 +695,13 @@ a:focus {
     margin: 0;
     font-size: 60px;
     line-height: 60px;
-    background-image: linear-gradient(#ffffff, #33b49e);
+    background-image: linear-gradient(#ffffff, var(--primary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .fact .fact-right .fact-icon [class^="flaticon-"]::before {
-    background-image: linear-gradient(#ffffff, #263a81);
+    background-image: linear-gradient(#ffffff, var(--primary-color));
 }
 
 .fact .fact-left,
@@ -696,17 +723,17 @@ a:focus {
 }
 
 .fact .fact-left {
-    color: #33b49e;
-    background: #263a81;
+    color: var(--primary-color);
+    background: var(--primary-color);
 }
 
 .fact .fact-right {
-    color: #263a81;
-    background: #33b49e;
+    color: var(--primary-color);
+    background: var(--primary-color);
 }
 
 .fact .fact-left h2 {
-    color: #33b49e;
+    color: var(--primary-color);
 }
 
 
@@ -763,7 +790,7 @@ a:focus {
     display: flex;
     align-items: center;
     height: 60px;
-    background: #263a81;
+    background: var(--primary-color);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -775,7 +802,7 @@ a:focus {
     width: calc(100% - 60px);
     font-size: 20px;
     font-weight: 700;
-    color: #33b49e;
+    color: var(--primary-color);
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
@@ -792,8 +819,8 @@ a:focus {
     font-size: 60px;
     line-height: 60px;
     font-weight: 100;
-    color: #263a81;
-    background: #33b49e;
+    color: var(--primary-color);
+    background: var(--primary-color);
     border-radius: 0;
     transition: .3s;
 }
@@ -844,7 +871,7 @@ a:focus {
     display: block;
     width: 100px;
     height: 100px;
-    background: #33b49e;
+    background: var(--primary-color);
     border-radius: 50%;
     animation: pulse-border 1500ms ease-out infinite;
 }
@@ -859,13 +886,13 @@ a:focus {
     display: block;
     width: 100px;
     height: 100px;
-    background: #33b49e;
+    background: var(--primary-color);
     border-radius: 50%;
     transition: all 200ms;
 }
 
 .video .btn-play:hover:after {
-    background-color: darken(#33b49e, 10%);
+    background-color: darken(var(--primary-color), 10%);
 }
 
 .video .btn-play img {
@@ -882,7 +909,7 @@ a:focus {
     z-index: 3;
     width: 0;
     height: 0;
-    border-left: 32px solid #263a81;
+    border-left: 32px solid var(--primary-color);
     border-top: 22px solid transparent;
     border-bottom: 22px solid transparent;
 }
@@ -951,14 +978,14 @@ a:focus {
     position: relative;
     padding: 25px 15px;
     text-align: center;
-    background: #263a81;
+    background: var(--primary-color);
     transition: .5s;
 }
 
 .team .team-text h2 {
     font-size: 20px;
     font-weight: 600;
-    color: #33b49e;
+    color: var(--primary-color);
     transition: .5s;
 }
 
@@ -968,11 +995,11 @@ a:focus {
 }
 
 .team .team-item:hover .team-text {
-    background: #33b49e;
+    background: var(--primary-color);
 }
 
 .team .team-item:hover .team-text h2 {
-    color: #263a81;
+    color: var(--primary-color);
     letter-spacing: 1px;
 }
 
@@ -1043,7 +1070,7 @@ a:focus {
     height: 100%;
     top: 0;
     left: calc(50% - .5px);
-    background: #33b49e;
+    background: var(--primary-color);
 }
 
 .faqs #accordion-1 {
@@ -1097,14 +1124,14 @@ a:focus {
 }
 
 .faqs .card-header [data-toggle="collapse"][aria-expanded="true"] {
-    background: #33b49e;
+    background: var(--primary-color);
 }
 
 .faqs .card-header [data-toggle="collapse"]:after {
     font-family: 'font Awesome 5 Free';
     content: "\f067";
     float: right;
-    color: #33b49e;
+    color: var(--primary-color);
     font-size: 12px;
     font-weight: 900;
     transition: .5s;
@@ -1114,7 +1141,7 @@ a:focus {
     font-family: 'font Awesome 5 Free';
     content: "\f068";
     float: right;
-    color: #263a81;
+    color: var(--primary-color);
     font-size: 12px;
     font-weight: 900;
     transition: .5s;
@@ -1200,7 +1227,7 @@ a:focus {
 }
 
 .testimonial .testimonial-slider h3 {
-    color: #33b49e;
+    color: var(--primary-color);
     font-size: 22px;
     font-weight: 700;
 }
@@ -1250,7 +1277,7 @@ a:focus {
     display: flex;
     align-items: center;
     height: 60px;
-    background: #263a81;
+    background: var(--primary-color);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -1262,7 +1289,7 @@ a:focus {
     width: calc(100% - 60px);
     font-size: 18px;
     font-weight: 700;
-    color: #33b49e;
+    color: var(--primary-color);
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
@@ -1279,8 +1306,8 @@ a:focus {
     font-size: 60px;
     line-height: 60px;
     font-weight: 100;
-    color: #263a81;
-    background: #33b49e;
+    color: var(--primary-color);
+    background: var(--primary-color);
     border-radius: 0;
     transition: .3s;
 }
@@ -1302,7 +1329,7 @@ a:focus {
     height: 1px;
     left: calc(50% - 50px);
     bottom: 0;
-    background: #33b49e;
+    background: var(--primary-color);
 }
 
 .blog .blog-meta p {
@@ -1312,7 +1339,7 @@ a:focus {
     font-size: 14px;
     font-weight: 300;
     font-style: italic;
-    color: #666666;
+    color: var(--text-secondary);
 }
 
 .blog .blog-meta p a {
@@ -1331,15 +1358,15 @@ a:focus {
 }
 
 .blog .pagination .page-link {
-    color: #263a81;
+    color: var(--primary-color);
     border-radius: 0;
-    border-color: #33b49e;
+    border-color: var(--primary-color);
 }
 
 .blog .pagination .page-link:hover,
 .blog .pagination .page-item.active .page-link {
-    color: #33b49e;
-    background: #263a81;
+    color: var(--primary-color);
+    background: var(--primary-color);
 }
 
 .blog .pagination .disabled .page-link {
@@ -1377,13 +1404,13 @@ a:focus {
     padding: 7px 15px;
     font-size: 14px;
     font-weight: 400;
-    color: #666666;
-    border: 1px solid #dddddd;
+    color: var(--text-secondary);
+    border: 1px solid var(--background-light);
 }
 
 .single .single-tags a:hover {
-    color: #33b49e;
-    background: #263a81;
+    color: var(--primary-color);
+    background: var(--primary-color);
 }
 
 .single .single-bio {
@@ -1496,16 +1523,16 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #263a81;
-    background: #33b49e;
+    color: var(--primary-color);
+    background: var(--primary-color);
     font-size: 16px;
     transition: .3s;
 }
 
 .single .related-slider .owl-nav .owl-prev:hover,
 .single .related-slider .owl-nav .owl-next:hover {
-    color: #33b49e;
-    background: #263a81;
+    color: var(--primary-color);
+    background: var(--primary-color);
 }
 
 .single .single-comment {
@@ -1562,13 +1589,13 @@ a:focus {
 .single .comment-text .btn {
     padding: 3px 10px;
     font-size: 14px;
-    color: #263a81;
-    background: #dddddd;
+    color: var(--primary-color);
+    background: var(--background-light);
     border-radius: 0;
 }
 
 .single .comment-text .btn:hover {
-    background: #33b49e;
+    background: var(--primary-color);
 }
 
 .single .comment-form {
@@ -1597,13 +1624,13 @@ a:focus {
 
 .single .comment-form .btn {
     padding: 15px 30px;
-    color: #263a81;
-    background: #33b49e;
+    color: var(--primary-color);
+    background: var(--primary-color);
 }
 
 .single .comment-form .btn:hover {
-    color: #33b49e;
-    background: #263a81;
+    color: var(--primary-color);
+    background: var(--primary-color);
 }
 
 
@@ -1641,7 +1668,7 @@ a:focus {
     height: 2px;
     bottom: 0;
     left: 0;
-    background: #33b49e;
+    background: var(--primary-color);
 }
 
 .sidebar .sidebar-widget .search-widget {
@@ -1650,7 +1677,7 @@ a:focus {
 
 .sidebar .search-widget input {
     height: 50px;
-    border: 1px solid #dddddd;
+    border: 1px solid var(--background-light);
     border-radius: 0;
 }
 
@@ -1665,7 +1692,7 @@ a:focus {
     height: 40px;
     padding: 0;
     font-size: 25px;
-    color: #33b49e;
+    color: var(--primary-color);
     background: none;
     border-radius: 0;
     border: none;
@@ -1673,7 +1700,7 @@ a:focus {
 }
 
 .sidebar .search-widget .btn:hover {
-    color: #263a81;
+    color: var(--primary-color);
 }
 
 .sidebar .sidebar-widget .recent-post {
@@ -1685,15 +1712,15 @@ a:focus {
 }
 
 .sidebar .tab-post .nav.nav-pills .nav-link {
-    color: #33b49e;
-    background: #263a81;
+    color: var(--primary-color);
+    background: var(--primary-color);
     border-radius: 0;
 }
 
 .sidebar .tab-post .nav.nav-pills .nav-link:hover,
 .sidebar .tab-post .nav.nav-pills .nav-link.active {
-    color: #263a81;
-    background: #33b49e;
+    color: var(--primary-color);
+    background: var(--primary-color);
 }
 
 .sidebar .tab-post .tab-content {
@@ -1733,7 +1760,7 @@ a:focus {
     content: '\f105';
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
-    color: #33b49e;
+    color: var(--primary-color);
     left: 1px;
 }
 
@@ -1753,13 +1780,13 @@ a:focus {
     padding: 7px 15px;
     font-size: 14px;
     font-weight: 400;
-    color: #666666;
-    border: 1px solid #dddddd;
+    color: var(--text-secondary);
+    border: 1px solid var(--background-light);
 }
 
 .single .tag-widget a:hover {
-    color: #33b49e;
-    background: #263a81;
+    color: var(--primary-color);
+    background: var(--primary-color);
 }
 
 .sidebar .image-widget {
@@ -1800,20 +1827,20 @@ a:focus {
     display: inline-block;
     margin: 5px;
     padding: 8px 15px;
-    color: #263a81;
+    color: var(--primary-color);
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
     border-radius: 0;
-    background: #33b49e;
+    background: var(--primary-color);
     border: none;
     transition: .3s;
 }
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-    background: #263a81;
-    color: #33b49e;
+    background: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .portfolio .load-more {
@@ -1827,8 +1854,8 @@ a:focus {
 }
 
 .portfolio .load-more .btn:hover {
-    color: #33b49e;
-    background: #263a81;
+    color: var(--primary-color);
+    background: var(--primary-color);
 }
 
 .portfolio .portfolio-warp {
@@ -1880,7 +1907,7 @@ a:focus {
     display: flex;
     align-items: center;
     height: 60px;
-    background: #263a81;
+    background: var(--primary-color);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -1892,7 +1919,7 @@ a:focus {
     width: calc(100% - 60px);
     font-size: 20px;
     font-weight: 700;
-    color: #33b49e;
+    color: var(--primary-color);
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
@@ -1909,7 +1936,7 @@ a:focus {
     font-size: 60px;
     line-height: 60px;
     font-weight: 100;
-    color: #263a81;
+    color: var(--primary-color);
     background: #ffffff;
     border-radius: 0;
     transition: .3s;
@@ -1917,7 +1944,7 @@ a:focus {
 
 .portfolio .portfolio-warp:hover a.btn {
     color: #ffffff;
-    background: #33b49e;
+    background: var(--primary-color);
 }
 
 
@@ -1936,11 +1963,11 @@ a:focus {
 }
 
 .contact .col-md-6:first-child {
-    background: #263a81;
+    background: var(--primary-color);
 }
 
 .contact .col-md-6:last-child {
-    background: #33b49e;
+    background: var(--primary-color);
 }
 
 .contact .contact-info {
@@ -1961,7 +1988,7 @@ a:focus {
 
 .contact .contact-item [class^="flaticon-"]::before {
     margin: 0;
-    color: #33b49e;
+    color: var(--primary-color);
     font-size: 40px;
 }
 
@@ -1972,7 +1999,7 @@ a:focus {
 }
 
 .contact .contact-text h2 {
-    color: #33b49e;
+    color: var(--primary-color);
     font-size: 20px;
     font-weight: 600;
 }
@@ -2032,15 +2059,15 @@ a:focus {
     padding: 16px 30px;
     font-size: 16px;
     font-weight: 600;
-    color: #33b49e;
-    background: #263a81;
+    color: var(--primary-color);
+    background: var(--primary-color);
     border: none;
     border-radius: 0;
     transition: .3s;
 }
 
 .contact .contact-form .btn:hover {
-    color: #263a81;
+    color: var(--primary-color);
     background: #ffffff;
 }
 
@@ -2058,7 +2085,7 @@ a:focus {
     position: relative;
     margin-top: 45px;
     padding-top: 90px;
-    background: #263a81;
+    background: var(--primary-color);
     color: #ffffff;
 }
 
@@ -2075,7 +2102,7 @@ a:focus {
     padding-bottom: 10px;
     font-size: 20px;
     font-weight: 600;
-    color: #33b49e;
+    color: var(--primary-color);
 }
 
 .footer h2::after {
@@ -2085,7 +2112,7 @@ a:focus {
     height: 2px;
     left: 0;
     bottom: 0;
-    background: #33b49e;
+    background: var(--primary-color);
 }
 
 .footer .footer-link a {
@@ -2104,7 +2131,7 @@ a:focus {
 }
 
 .footer .footer-link a:hover {
-    color: #33b49e;
+    color: var(--primary-color);
     letter-spacing: 1px;
 }
 
@@ -2134,12 +2161,12 @@ a:focus {
 }
 
 .footer .footer-social a:hover {
-    background: #33b49e;
-    border-color: #33b49e;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .footer .footer-social a:hover i {
-    color: #263a81;
+    color: var(--primary-color);
 }
 
 .footer .newsletter .form {
@@ -2163,16 +2190,16 @@ a:focus {
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
-    color: #33b49e;
+    color: var(--primary-color);
     background: #121518;
     border-radius: 0;
-    border: 2px solid #33b49e;
+    border: 2px solid var(--primary-color);
     transition: .3s;
 }
 
 .footer .newsletter .btn:hover {
     color: #121518;
-    background: #33b49e;
+    background: var(--primary-color);
 }
 
 .footer .footer-menu .f-menu {
@@ -2193,7 +2220,7 @@ a:focus {
 }
 
 .footer .footer-menu .f-menu a:hover {
-    color: #33b49e;
+    color: var(--primary-color);
 }
 
 .footer .footer-menu .f-menu a:last-child {
@@ -2217,7 +2244,7 @@ a:focus {
 }
 
 .footer .copyright p a {
-    color: #33b49e;
+    color: var(--primary-color);
     font-weight: 500;
     letter-spacing: 1px;
 }
